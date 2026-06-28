@@ -87,7 +87,7 @@ const KanbanMockup = () => {
                 className="w-full bg-green-500/10 border border-green-500/20 rounded-lg p-2 flex flex-col gap-1"
               >
                 <div className="flex justify-between items-center">
-                  <span className="text-[9px] font-bold text-green-500">Won! 🎉</span>
+                  <span className="text-[9px] font-bold text-green-500">Won!</span>
                   <span className="text-[8px] bg-green-500/20 text-green-400 px-1 rounded font-mono">Rs.25,000</span>
                 </div>
                 <div className="w-full h-1 bg-green-500/20 rounded" />
@@ -100,10 +100,10 @@ const KanbanMockup = () => {
       <div className="absolute bottom-2 left-4 right-4 bg-background/80 border border-border rounded px-2.5 py-1 text-[9px] text-muted-foreground flex justify-between items-center">
         <span>
           {step === 0 && "Waiting for incoming events..."}
-          {step === 1 && "💬 Step 1: Client sends WhatsApp message"}
-          {step === 2 && "🔄 Step 2: Auto-creates & advances Kanban lead"}
-          {step === 3 && "🏆 Step 3: Closed Won deals track directly in revenue"}
-          {step === 4 && "✅ Success: Lead logged and won without manual input!"}
+          {step === 1 && "Step 1: Client sends WhatsApp message"}
+          {step === 2 && "Step 2: Auto-creates & advances Kanban lead"}
+          {step === 3 && "Step 3: Closed Won deals track directly in revenue"}
+          {step === 4 && "Success: Lead logged and won without manual input!"}
         </span>
         <CheckCircle2 className={`w-3.5 h-3.5 ${step === 4 ? 'text-green-500' : 'text-muted-foreground'}`} />
       </div>
@@ -173,7 +173,7 @@ const ProfileMockup = () => {
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
                 <span className="font-mono text-[8px] text-muted-foreground">10:00 AM</span>
-                <span className="flex-grow">💬 WhatsApp Log: &ldquo;Interested in CRM&rdquo;</span>
+                <span className="flex-grow">WhatsApp Log: &ldquo;Interested in CRM&rdquo;</span>
               </motion.div>
             )}
 
@@ -186,7 +186,7 @@ const ProfileMockup = () => {
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
                 <span className="font-mono text-[8px] text-muted-foreground">11:15 AM</span>
-                <span className="flex-grow">📄 Quotation #QT-948 Sent (Rs.45,000)</span>
+                <span className="flex-grow">Quotation #QT-948 Sent (Rs.45,000)</span>
               </motion.div>
             )}
 
@@ -199,7 +199,7 @@ const ProfileMockup = () => {
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
                 <span className="font-mono text-[8px] text-muted-foreground">12:30 PM</span>
-                <span className="flex-grow">💰 Invoice #INV-102 Paid via UPI</span>
+                <span className="flex-grow">Invoice #INV-102 Paid via UPI</span>
               </motion.div>
             )}
           </div>
@@ -209,10 +209,10 @@ const ProfileMockup = () => {
       <div className="absolute bottom-2 left-4 right-4 bg-background/80 border border-border rounded px-2.5 py-1 text-[9px] text-muted-foreground flex justify-between items-center">
         <span>
           {step === 0 && "Enter party name to view single source timeline"}
-          {step === 1 && "🔄 Loading 1: Instant WhatsApp communication log"}
-          {step === 2 && "🔄 Loading 2: Auto-linked Quotation parameters"}
-          {step === 3 && "🔄 Loading 3: Accounting, direct UPI settlement"}
-          {step === 4 && "✅ Ledger Sync complete! 360-degree visibility."}
+          {step === 1 && "Loading 1: Instant WhatsApp communication log"}
+          {step === 2 && "Loading 2: Auto-linked Quotation parameters"}
+          {step === 3 && "Loading 3: Accounting, direct UPI settlement"}
+          {step === 4 && "Ledger Sync complete! 360-degree visibility."}
         </span>
         <CheckCircle2 className={`w-3.5 h-3.5 ${step === 4 ? 'text-green-500' : 'text-muted-foreground'}`} />
       </div>
@@ -340,12 +340,12 @@ const InvoiceMockup = () => {
 
       <div className="absolute bottom-2 left-4 right-4 bg-background/80 border border-border rounded px-2.5 py-1 text-[9px] text-muted-foreground flex justify-between items-center pointer-events-none">
         <span>
-          {step === 0 && "⚡ Click 'Generate GST' on Lead to begin..."}
-          {step === 1 && "📝 Step 1: Invoicing form details auto-populate"}
-          {step === 2 && "💰 Step 2: Line items automatically computed"}
-          {step === 3 && "🔘 Step 3: Clicking 'Sync & Send via WhatsApp'"}
-          {step === 4 && "🔄 Step 4: Updating centralized financial ledger..."}
-          {step === 5 && "✅ Ledger updated! Sent to client's phone."}
+          {step === 0 && "Click 'Generate GST' on Lead to begin..."}
+          {step === 1 && "Step 1: Invoicing form details auto-populate"}
+          {step === 2 && "Step 2: Line items automatically computed"}
+          {step === 3 && "Step 3: Clicking 'Sync & Send via WhatsApp'"}
+          {step === 4 && "Step 4: Updating centralized financial ledger..."}
+          {step === 5 && "Ledger updated! Sent to client's phone."}
         </span>
       </div>
     </div>
@@ -383,11 +383,11 @@ const PayrollMockup = () => {
         <div className="bg-background border border-border rounded-lg p-2 flex flex-col items-center gap-1.5 text-[9px]">
           <span className="text-muted-foreground font-mono text-[8px]">Attendance Sync</span>
           <div className="flex gap-0.5 font-bold">
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>✅</span>
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>✅</span>
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>✅</span>
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>✅</span>
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>✅</span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
           </div>
         </div>
 
@@ -428,7 +428,7 @@ const PayrollMockup = () => {
         
         {step === 5 ? (
           <span className="text-[8px] bg-green-500/20 text-green-500 px-1.5 py-0.5 rounded font-extrabold font-mono animate-bounce">
-            PAID ✅
+            PAID
           </span>
         ) : (
           <span className="text-[8px] bg-primary/10 text-foreground px-1.5 py-0.5 rounded font-mono">

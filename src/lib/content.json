@@ -34,10 +34,10 @@
     "kicker": "TRUSTED AT SCALE",
     "logos": [
       { "src": "/resources/llm t1.jpg", "alt": "Local Logic Media" },
+      { "src": "/resources/square t2.jpg", "alt": "Square Technologies" },
       { "src": "/resources/llm t1.jpg", "alt": "Local Logic Studios" },
-      { "src": "/resources/llm t1.jpg", "alt": "Square Technologies" },
-      { "src": "/resources/llm t1.jpg", "alt": "Local Logic Media" },
-      { "src": "/resources/llm t1.jpg", "alt": "Square Technologies" }
+      { "src": "/resources/square t2.jpg", "alt": "Square Technologies" },
+      { "src": "/resources/llm t1.jpg", "alt": "Local Logic Media" }
     ],
     "stats": [
       { "value": "50", "suffix": "+", "label": "Employees tracked" },
@@ -217,7 +217,7 @@
       {
         "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
         "text": "The GST-ready billing engine alone is worth it. It automatically syncs with our deal stages. Fantastic platform for Indian tech businesses.",
-        "name": "VikasRaj Yadav",
+        "name": "VikasRaj",
         "username": "CEO",
         "social": "Square Technologies"
       }
