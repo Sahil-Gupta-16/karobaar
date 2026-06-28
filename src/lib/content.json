@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Karobaar CRM | Built for Indian Sales Teams",
-    "description": "Close more deals, track every party, and send quotations from one real-time workspace."
+    "title": "Karobaar CRM | Built for Coaching Classes & Teams",
+    "description": "Close more admissions, track geofenced teacher attendance, and calculate visiting faculty payroll from one real-time workspace."
   },
   "navigation": {
     "logoText": "Karobaar",
@@ -13,7 +13,7 @@
     "ctaLabel": "Get Started"
   },
   "announcement": {
-    "text": "New: Payroll auto-filing now live for India + US →",
+    "text": "New: Geofenced teacher attendance & faculty payroll now live →",
     "link": "/features/payroll"
   },
   "hero": {
@@ -51,37 +51,37 @@
     "without": {
       "title": "The Old Way",
       "painPoints": [
-        "Leads buried in WhatsApp threads",
-        "Parties in an Excel file no one updates",
+        "Inquiries buried in WhatsApp threads",
+        "Student lists in an Excel file no one updates",
         "Invoices scattered in disconnected tools",
-        "Payroll calculation errors"
+        "Faculty salary calculation errors"
       ]
     },
     "with": {
       "title": "The Karobaar Way",
       "interactiveSolutions": [
         {
-          "title": "Unified Kanban Board",
-          "description": "WhatsApp messages and calls automatically log into the CRM pipeline. No more manual data entry or lost leads.",
-          "featureTag": "Sales CRM",
+          "title": "Unified Admission Kanban",
+          "description": "WhatsApp student inquiries automatically log into the CRM pipeline. Track every demo class from booked to attended.",
+          "featureTag": "Enrollment CRM",
           "mockupType": "kanban"
         },
         {
-          "title": "Single Source of Truth",
-          "description": "Every party profile updates in real-time. One click reveals every invoice, quotation, and interaction history.",
-          "featureTag": "Party Management",
+          "title": "Single Student Profile",
+          "description": "Every parent contact, demo lecture history, and installment schedule updates in real-time.",
+          "featureTag": "Student Ledger",
           "mockupType": "profile"
         },
         {
-          "title": "Integrated Invoicing",
-          "description": "Generate GST-compliant invoices directly from the lead card in under 60 seconds. Syncs seamlessly with your accounting.",
-          "featureTag": "Billing",
+          "title": "Fee Quotations",
+          "description": "Generate GST-compliant fee receipts and installment plans. Send professional estimates directly to parents via WhatsApp.",
+          "featureTag": "Installment Billing",
           "mockupType": "invoice"
         },
         {
-          "title": "Zero-Entry Payroll",
-          "description": "The attendance engine flows directly into the payroll calculator. Taxes and deductions are handled automatically.",
-          "featureTag": "HR & Payroll",
+          "title": "Visiting Faculty Payroll",
+          "description": "The geofenced check-in log flows directly into the faculty payroll calculator. Hourly rates and per-lecture payouts are processed instantly.",
+          "featureTag": "Staff Attendance & Payroll",
           "mockupType": "payroll"
         }
       ]
@@ -89,73 +89,73 @@
   },
   "architecture": {
     "kicker": "HOW IT WORKS",
-    "headline": "The complete sales lifecycle.",
-    "subline": "From the first lead to the final quotation. Karobaar handles your entire workflow in one unified platform.",
+    "headline": "The complete educational lifecycle.",
+    "subline": "From the first inquiry call to the final course completion. Karobaar handles your entire coaching center operations.",
     "flowSteps": [
       {
         "id": "pipelines",
         "step": "01",
-        "title": "Leads & Pipelines",
-        "description": "Visualize your entire sales funnel. Drag and drop leads through custom stages and never miss a follow-up.",
+        "title": "Inquiries & Pipelines",
+        "description": "Visualize your counseling pipeline. Drag and drop student leads through customized demo and enrollment stages.",
         "uiType": "pipeline"
       },
       {
         "id": "parties",
         "step": "02",
-        "title": "Unified Parties",
-        "description": "Every lead automatically enriches your Party directory. View full transaction history and activity logs in one place.",
+        "title": "Student & Parent Ledger",
+        "description": "Every admission enriches your Student directory. View complete payment schedules, installment balances, and activity logs.",
         "uiType": "party"
       },
       {
         "id": "quotations",
         "step": "03",
-        "title": "Instant Quotations",
-        "description": "Pull products directly from your Catalog to generate professional, accurate quotations in seconds.",
+        "title": "Fee Structure Estimates",
+        "description": "Pull courses directly from your Course Catalog to generate professional, accurate fee quotations in seconds.",
         "uiType": "quotation"
       },
       {
         "id": "analytics",
         "step": "04",
-        "title": "Analytics & Activity",
-        "description": "Track your win rates, monitor team activity logs, and get a bird's-eye view of your entire business performance.",
+        "title": "Center Performance Analytics",
+        "description": "Monitor counselor win rates, track total enrollment trends, and manage pending fee collections from one executive dashboard.",
         "uiType": "analytics"
       }
     ]
   },
   "useCases": {
     "kicker": "PLATFORM FEATURES",
-    "headline": "Powerful engines under the hood.",
+    "headline": "Built for coaching class efficiency.",
     "sections": [
       {
         "number": "01",
-        "title": "Custom Pipeline Builder",
-        "description": "Don't force your sales process into rigid boxes. Build custom stages, triggers, and workflows that match exactly how your business operates.",
+        "title": "Custom Counseling Pipelines",
+        "description": "Don't force your enrollment process into rigid boxes. Build custom stages, counselor assignment rules, and follow-up schedules that match how your center operates.",
         "bullets": [
-          "Drag-and-drop stage builder",
-          "Custom automation triggers",
-          "Visual workflow mapping"
+          "Drag-and-drop counselor pipeline",
+          "Custom demo lecture triggers",
+          "Counselor performance metrics"
         ],
         "mediaSrc": "/pipeline-builder.mp4"
       },
       {
         "number": "02",
-        "title": "GST-Ready Billing Engine",
-        "description": "Don't just send quotes, get paid. Convert winning quotations into GST-compliant invoices instantly.",
+        "title": "Visiting Faculty Payroll Engine",
+        "description": "Stop auditing manual teacher spreadsheets. Faculty attendance checks directly flow into automated, per-lecture salary calculations including TDS and cash-advance tracking.",
         "bullets": [
-          "Auto-calculated GST",
-          "Custom invoice templates",
-          "Payment status tracking"
+          "Per-lecture or hourly rate structures",
+          "TDS & professional tax adjustments",
+          "Bank-transfer bulk export files"
         ],
         "mediaSrc": "/billing-preview.mp4"
       },
       {
         "number": "03",
-        "title": "Access Control & Activity Logs",
-        "description": "Control exactly who sees what and track every single action taken across your organization.",
+        "title": "Geofenced Staff Attendance Logs",
+        "description": "Ensure absolute accountability. Teachers and receptionists log attendance via the app with GPS geofencing, restricted to center coordinates.",
         "bullets": [
-          "Role-based permissions",
-          "Immutable audit trails",
-          "Team performance tracking"
+          "Branch-level geofenced check-in/out",
+          "Visiting lecturer session sheets",
+          "Immutable audit logs & trails"
         ],
         "mediaSrc": "/security-preview.mp4"
       }
@@ -163,63 +163,77 @@
   },
   "benchmark": {
     "kicker": "COMPARISON",
-    "headline": "See how we stack up.",
-    "competitors": ["Karobaar", "Salesforce", "HubSpot", "Zoho"],
+    "headline": "Why coaching centers switch to Karobaar.",
+    "competitors": ["Karobaar", "SchoolMint", "Examo", "Excel/WhatsApp"],
     "rows": [
       {
-        "feature": "Customizability",
+        "feature": "Custom Admission Pipelines",
         "Karobaar": true,
-        "Salesforce": true,
-        "HubSpot": false,
-        "Zoho": true
+        "SchoolMint": false,
+        "Examo": false,
+        "Excel/WhatsApp": false
       },
       {
-        "feature": "Built-in Payroll",
+        "feature": "Geofenced Staff Attendance",
         "Karobaar": true,
-        "Salesforce": false,
-        "HubSpot": false,
-        "Zoho": false
+        "SchoolMint": true,
+        "Examo": false,
+        "Excel/WhatsApp": false
       },
       {
-        "feature": "India Compliance",
+        "feature": "Visiting Faculty Payroll",
         "Karobaar": true,
-        "Salesforce": false,
-        "HubSpot": false,
-        "Zoho": true
+        "SchoolMint": false,
+        "Examo": false,
+        "Excel/WhatsApp": false
       },
       {
-        "feature": "Zero Real-time Sync",
+        "feature": "WhatsApp Fee Reminders",
         "Karobaar": true,
-        "Salesforce": false,
-        "HubSpot": false,
-        "Zoho": false
+        "SchoolMint": false,
+        "Examo": true,
+        "Excel/WhatsApp": false
+      },
+      {
+        "feature": "Multi-Branch Support",
+        "Karobaar": true,
+        "SchoolMint": true,
+        "Examo": true,
+        "Excel/WhatsApp": false
+      },
+      {
+        "feature": "Real-time Sync",
+        "Karobaar": true,
+        "SchoolMint": false,
+        "Examo": false,
+        "Excel/WhatsApp": false
       }
     ]
   },
   "testimonialsGrid": {
-    "title": "Read what people are saying",
-    "description": "Real feedback from growing teams using Karobaar to run their operations.",
+    "title": "Loved by coaching directors",
+    "description": "Real feedback from educational business owners using Karobaar to run their operations.",
     "items": [
       {
         "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
-        "text": "Karobaar completely transformed how we manage our media production pipelines. The custom workflows are a lifesaver.",
-        "name": "Ankit",
-        "username": "CEO",
-        "social": "LocalLogic Media"
+        "text": "Karobaar completely transformed our counseling process. Inquiries are tracked properly, and our demo attendance rate skyrocketed.",
+        "name": "Ankit Kumar",
+        "username": "Director",
+        "social": "Apex Science Academies"
       },
       {
         "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
-        "text": "Before this CRM, our leads were scattered across WhatsApp and Excel. Now everything is unified and our win rate is up 30%.",
+        "text": "Before this platform, our inquiries were scattered across notebooks and Excel sheets. Now everything is unified and our counselor performance is clear.",
         "name": "Aryan Bhosle",
-        "username": "CEO",
-        "social": "Local Logic Studios"
+        "username": "Founder",
+        "social": "Bhosle Tutorials"
       },
       {
         "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
-        "text": "The GST-ready billing engine alone is worth it. It automatically syncs with our deal stages. Fantastic platform for Indian tech businesses.",
-        "name": "VikasRaj",
+        "text": "Calculating visiting faculty salary used to take me 3 full days of auditing registers. The geofenced class log handles everything automatically. Amazing!",
+        "name": "VikasRaj Yadav",
         "username": "CEO",
-        "social": "Square Technologies"
+        "social": "IIT Edge Classes"
       }
     ]
   },
@@ -230,51 +244,78 @@
     "tiers": [
       {
         "name": "Starter",
-        "price": "₹1,499",
+        "priceMonthly": "₹1,499",
+        "priceYearly": "₹1,199",
+        "yearlyTotal": "₹14,388",
+        "yearlySavings": "₹3,600",
         "interval": "/mo",
-        "for": "1 login device",
+        "for": "3 Devices · 3 Pipelines",
         "isPopular": false,
         "benefits": [
-          { "text": "1 Pipeline", "checked": true },
-          { "text": "5 Tags", "checked": true },
-          { "text": "Fee quotation generator", "checked": true },
-          { "text": "Basic analytics dashboard", "checked": true },
-          { "text": "Mobile app access", "checked": false },
-          { "text": "Geofenced teacher attendance", "checked": false },
-          { "text": "Visiting faculty payroll engine", "checked": false },
-          { "text": "WhatsApp fee reminders", "checked": false },
-          { "text": "Multi-branch support", "checked": false }
+          { "text": "3 Multi-Stage Pipelines", "checked": true },
+          { "text": "3 Connected Devices Included", "checked": true },
+          { "text": "5 Custom Lead Tags", "checked": true },
+          { "text": "Professional Fee Quotations", "checked": true },
+          { "text": "Basic Enrollment Analytics", "checked": true },
+          { "text": "Mobile App Access", "checked": false },
+          { "text": "Geofenced Teacher Attendance", "checked": false },
+          { "text": "Visiting Faculty Payroll", "checked": false },
+          { "text": "WhatsApp Fee Reminders", "checked": false },
+          { "text": "Multi-Branch Center Support", "checked": false }
         ]
       },
       {
         "name": "Growth",
-        "price": "₹3,499",
+        "priceMonthly": "₹3,499",
+        "priceYearly": "₹2,799",
+        "yearlyTotal": "₹33,588",
+        "yearlySavings": "₹8,400",
         "interval": "/mo",
-        "for": "10 login devices",
+        "for": "20 Devices · Unlimited Pipelines",
         "isPopular": true,
         "benefits": [
-          { "text": "3 Pipelines", "checked": true },
-          { "text": "20 Tags", "checked": true },
-          { "text": "Geofenced teacher attendance", "checked": true },
-          { "text": "Visiting faculty payroll engine", "checked": true },
-          { "text": "WhatsApp fee reminders", "checked": true },
-          { "text": "Multi-branch support", "checked": true },
-          { "text": "Mobile app access", "checked": false }
+          { "text": "Everything in Starter Plan", "checked": true },
+          { "text": "Unlimited Customized Pipelines", "checked": true },
+          { "text": "Unlimited Lead Tags & Segments", "checked": true },
+          { "text": "Additional Devices: ₹1,000/yr", "checked": true },
+          { "text": "Direct On-Call Support", "checked": true },
+          { "text": "Automated WhatsApp Integration", "checked": true },
+          { "text": "Geofenced Teacher Attendance Logs", "checked": true },
+          { "text": "Visiting Faculty Payroll Engine", "checked": true },
+          { "text": "WhatsApp Fee & Batch Reminders", "checked": true },
+          { "text": "Multi-Branch Center Management", "checked": true },
+          { "text": "Mobile App Access (Full Sync)", "checked": true }
         ]
       },
       {
         "name": "Elite",
-        "price": "₹7,999",
+        "priceMonthly": "₹7,999",
+        "priceYearly": "₹6,399",
+        "yearlyTotal": "₹76,788",
+        "yearlySavings": "₹19,200",
         "interval": "/mo",
-        "for": "Unlimited login devices · Multi-branch",
+        "for": "Unlimited login devices · Separate infra",
         "isPopular": false,
         "benefits": [
-          { "text": "Mobile app access", "checked": true, "highlight": true },
-          { "text": "Custom API integrations", "checked": true, "highlight": true },
-          { "text": "Unlimited Pipelines", "checked": true },
-          { "text": "Unlimited Tags", "checked": true },
-          { "text": "Multi-branch support", "checked": true },
-          { "text": "Priority support", "checked": true }
+          {
+            "text": "Mobile App Access (Full Sync)",
+            "checked": true,
+            "highlight": true
+          },
+          {
+            "text": "Custom REST API Integrations",
+            "checked": true,
+            "highlight": true
+          },
+          { "text": "Everything in Growth Plan", "checked": true },
+          { "text": "Personalized Account Success Manager", "checked": true },
+          {
+            "text": "Tailored Feature & Custom Modifications",
+            "checked": true
+          },
+          { "text": "Dedicated Database (Isolated Data)", "checked": true },
+          { "text": "Standalone Branded Mobile App", "checked": true },
+          { "text": "Early Access to Beta Features", "checked": true }
         ]
       }
     ]
@@ -285,21 +326,25 @@
     "questions": [
       {
         "question": "How long does setup take?",
-        "answer": "Most teams are live in under 30 minutes. No engineering required."
+        "answer": "Most centers are live in under 30 minutes. We import your student database for free."
       },
       {
-        "question": "Can I use my existing party and product data?",
-        "answer": "Yes. Contact us and we will help you migrate."
+        "question": "Can I migrate my student records from Excel?",
+        "answer": "Yes. Our team handles your database migration for free so you can start right away."
       },
       {
-        "question": "Is my data safe?",
-        "answer": "All data is encrypted in transit and at rest."
+        "question": "How does visiting faculty payroll work?",
+        "answer": "Visiting faculty check-in via geofencing and log their lectures. The system automatically computes their salaries based on hourly/lecture slabs at month-end."
+      },
+      {
+        "question": "Can we send fee receipts automatically on parent WhatsApp?",
+        "answer": "Yes. Once an installment receipt is generated, it triggers an automated message directly to the parent's phone."
       }
     ]
   },
   "finalCta": {
-    "headline": "Ready to unify your workflow?",
-    "subline": "Join hundreds of Indian businesses running smarter with Karobaar.",
+    "headline": "Ready to digitize your operations?",
+    "subline": "Join growing coaching academies streamlining admissions and payroll with Karobaar.",
     "ctaLabel": "Start free trial",
     "ctaHref": "/signup",
     "riskReducer": "14-day free trial. Cancel anytime."
