@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "title": "Karobaar CRM | Built for Indian Sales Teams",
+    "description": "Close more deals, track every party, and send quotations from one real-time workspace."
+  },
+  "navigation": {
+    "logoText": "Karobaar",
+    "links": [
+      { "label": "Features", "href": "#features" },
+      { "label": "How it Works", "href": "#how-it-works" },
+      { "label": "Pricing", "href": "#pricing" }
+    ],
+    "ctaLabel": "Get Started"
+  },
+  "announcement": {
+    "text": "New: Payroll auto-filing now live for India + US →",
+    "link": "/features/payroll"
+  },
+  "hero": {
+    "kicker": "THE CRM THAT RUNS YOUR WHOLE TEAM",
+    "headline": "Manage customers, attendance, and payroll — without juggling three tools.",
+    "subline": "Built for growing Indian teams who are tired of stitching tools together.",
+    "ctaPrimary": {
+      "label": "Start free trial",
+      "href": "/signup"
+    },
+    "ctaSecondary": {
+      "label": "Book a demo",
+      "href": "#demo"
+    },
+    "demoVideoSrc": "/demo-loop.mp4"
+  },
+  "metrics": {
+    "kicker": "TRUSTED AT SCALE",
+    "logos": [
+      { "src": "/resources/llm t1.jpg", "alt": "Local Logic Media" },
+      { "src": "/resources/llm t1.jpg", "alt": "Local Logic Studios" },
+      { "src": "/resources/llm t1.jpg", "alt": "Square Technologies" },
+      { "src": "/resources/llm t1.jpg", "alt": "Local Logic Media" },
+      { "src": "/resources/llm t1.jpg", "alt": "Square Technologies" }
+    ],
+    "stats": [
+      { "value": "50", "suffix": "+", "label": "Employees tracked" },
+      { "value": "100", "suffix": "+", "label": "Quotations sent" },
+      { "value": "3", "suffix": "+", "label": "Companies" }
+    ]
+  },
+  "problemSolution": {
+    "kicker": "THE KAROBAAR DIFFERENCE",
+    "headline": "Stop fighting your tools.",
+    "without": {
+      "title": "The Old Way",
+      "painPoints": [
+        "Leads buried in WhatsApp threads",
+        "Parties in an Excel file no one updates",
+        "Invoices scattered in disconnected tools",
+        "Payroll calculation errors"
+      ]
+    },
+    "with": {
+      "title": "The Karobaar Way",
+      "interactiveSolutions": [
+        {
+          "title": "Unified Kanban Board",
+          "description": "WhatsApp messages and calls automatically log into the CRM pipeline. No more manual data entry or lost leads.",
+          "featureTag": "Sales CRM",
+          "mockupType": "kanban"
+        },
+        {
+          "title": "Single Source of Truth",
+          "description": "Every party profile updates in real-time. One click reveals every invoice, quotation, and interaction history.",
+          "featureTag": "Party Management",
+          "mockupType": "profile"
+        },
+        {
+          "title": "Integrated Invoicing",
+          "description": "Generate GST-compliant invoices directly from the lead card in under 60 seconds. Syncs seamlessly with your accounting.",
+          "featureTag": "Billing",
+          "mockupType": "invoice"
+        },
+        {
+          "title": "Zero-Entry Payroll",
+          "description": "The attendance engine flows directly into the payroll calculator. Taxes and deductions are handled automatically.",
+          "featureTag": "HR & Payroll",
+          "mockupType": "payroll"
+        }
+      ]
+    }
+  },
+  "architecture": {
+    "kicker": "HOW IT WORKS",
+    "headline": "The complete sales lifecycle.",
+    "subline": "From the first lead to the final quotation. Karobaar handles your entire workflow in one unified platform.",
+    "flowSteps": [
+      {
+        "id": "pipelines",
+        "step": "01",
+        "title": "Leads & Pipelines",
+        "description": "Visualize your entire sales funnel. Drag and drop leads through custom stages and never miss a follow-up.",
+        "uiType": "pipeline"
+      },
+      {
+        "id": "parties",
+        "step": "02",
+        "title": "Unified Parties",
+        "description": "Every lead automatically enriches your Party directory. View full transaction history and activity logs in one place.",
+        "uiType": "party"
+      },
+      {
+        "id": "quotations",
+        "step": "03",
+        "title": "Instant Quotations",
+        "description": "Pull products directly from your Catalog to generate professional, accurate quotations in seconds.",
+        "uiType": "quotation"
+      },
+      {
+        "id": "analytics",
+        "step": "04",
+        "title": "Analytics & Activity",
+        "description": "Track your win rates, monitor team activity logs, and get a bird's-eye view of your entire business performance.",
+        "uiType": "analytics"
+      }
+    ]
+  },
+  "useCases": {
+    "kicker": "PLATFORM FEATURES",
+    "headline": "Powerful engines under the hood.",
+    "sections": [
+      {
+        "number": "01",
+        "title": "Custom Pipeline Builder",
+        "description": "Don't force your sales process into rigid boxes. Build custom stages, triggers, and workflows that match exactly how your business operates.",
+        "bullets": ["Drag-and-drop stage builder", "Custom automation triggers", "Visual workflow mapping"],
+        "mediaSrc": "/pipeline-builder.mp4"
+      },
+      {
+        "number": "02",
+        "title": "GST-Ready Billing Engine",
+        "description": "Don't just send quotes, get paid. Convert winning quotations into GST-compliant invoices instantly.",
+        "bullets": ["Auto-calculated GST", "Custom invoice templates", "Payment status tracking"],
+        "mediaSrc": "/billing-preview.mp4"
+      },
+      {
+        "number": "03",
+        "title": "Access Control & Activity Logs",
+        "description": "Control exactly who sees what and track every single action taken across your organization.",
+        "bullets": ["Role-based permissions", "Immutable audit trails", "Team performance tracking"],
+        "mediaSrc": "/security-preview.mp4"
+      }
+    ]
+  },
+  "benchmark": {
+    "kicker": "COMPARISON",
+    "headline": "See how we stack up.",
+    "competitors": ["Karobaar", "Salesforce", "HubSpot", "Zoho"],
+    "rows": [
+      { "feature": "Customizability", "Karobaar": true, "Salesforce": true, "HubSpot": false, "Zoho": true },
+      { "feature": "Built-in Payroll", "Karobaar": true, "Salesforce": false, "HubSpot": false, "Zoho": false },
+      { "feature": "India Compliance", "Karobaar": true, "Salesforce": false, "HubSpot": false, "Zoho": true },
+      { "feature": "Zero Real-time Sync", "Karobaar": true, "Salesforce": false, "HubSpot": false, "Zoho": false }
+    ]
+  },
+  "testimonialsGrid": {
+    "title": "Read what people are saying",
+    "description": "Real feedback from growing teams using Karobaar to run their operations.",
+    "items": [
+      {
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
+        "text": "Karobaar completely transformed how we manage our media production pipelines. The custom workflows are a lifesaver.",
+        "name": "Ankit",
+        "username": "Co-Founder",
+        "social": "Local Logic Media"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+        "text": "Before this CRM, our leads were scattered across WhatsApp and Excel. Now everything is unified and our win rate is up 30%.",
+        "name": "Aryan Bhosle",
+        "username": "Co-Founder",
+        "social": "Local Logic Studios"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
+        "text": "The GST-ready billing engine alone is worth it. It automatically syncs with our deal stages. Fantastic platform for Indian tech businesses.",
+        "name": "VikasRaj Yadav",
+        "username": "CEO",
+        "social": "Square Technologies"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+        "text": "The custom pipeline builder allows us to define our exact sales process without fighting the software. Highly recommended.",
+        "name": "Rohan Gupta",
+        "username": "CTO",
+        "social": "Square Technologies"
+      }
+    ]
+  },
+  "pricing": {
+    "kicker": "PRICING",
+    "headline": "Simple pricing for growing teams.",
+    "trialNote": "14-day free trial · no credit card required",
+    "tiers": [
+      {
+        "name": "Starter",
+        "price": "Rs.999",
+        "interval": "/mo",
+        "for": "1-3 users, 1 pipeline",
+        "isPopular": false
+      },
+      {
+        "name": "Growth",
+        "price": "Rs.2,499",
+        "interval": "/mo",
+        "for": "Up to 10 users, unlimited pipelines",
+        "isPopular": true
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "FAQ",
+    "headline": "Frequently asked questions.",
+    "questions": [
+      {
+        "question": "How long does setup take?",
+        "answer": "Most teams are live in under 30 minutes. No engineering required."
+      },
+      {
+        "question": "Can I use my existing party and product data?",
+        "answer": "Yes. Contact us and we will help you migrate."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "All data is encrypted in transit and at rest."
+      }
+    ]
+  },
+  "finalCta": {
+    "headline": "Ready to unify your workflow?",
+    "subline": "Join hundreds of Indian businesses running smarter with Karobaar.",
+    "ctaLabel": "Start free trial",
+    "ctaHref": "/signup",
+    "riskReducer": "14-day free trial. Cancel anytime."
+  },
+  "footer": {
+    "copyright": "© 2026 Karobaar. All rights reserved.",
+    "links": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Service", "href": "/terms" },
+      { "label": "Security", "href": "/security" },
+      { "label": "System Status", "href": "/status" }
+    ]
+  }
+}

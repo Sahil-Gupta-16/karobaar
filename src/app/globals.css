@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* High-Contrast Monochrome (Sleek Professional Dark) */
+    --bg-base: #050505;
+    --bg-surface: #0E0E10;
+    --border-line: rgba(255, 255, 255, 0.08);
+    --primary-text: #FAF9FA;
+    --primary: #FAF9FA;
+    --primary-foreground: #050505;
+    --accent-color: #FFFFFF;
+    --accent-foreground: #050505;
+    --accent-hover: #E4E4E7;
+    --muted-foreground: #7F7E87;
+    --secondary: #18181B;
+    --secondary-foreground: #FAF9FA;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      /* High-Contrast Monochrome (Sleek Professional Light) */
+      --bg-base: #FFFFFF;
+      --bg-surface: #F4F4F5;
+      --border-line: rgba(0, 0, 0, 0.06);
+      --primary-text: #09090B;
+      --primary: #09090B;
+      --primary-foreground: #FFFFFF;
+      --accent-color: #09090B;
+      --accent-foreground: #FFFFFF;
+      --accent-hover: #27272A;
+      --muted-foreground: #71717A;
+      --secondary: #F4F4F5;
+      --secondary-foreground: #09090B;
+    }
+  }
+}
+
+@theme inline {
+  --color-background: var(--bg-base);
+  --color-foreground: var(--primary-text);
+  --color-surface: var(--bg-surface);
+  --color-border: var(--border-line);
+  --color-accent: var(--accent-color);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-hover: var(--accent-hover);
+  --color-card: var(--bg-surface);
+  --color-card-foreground: var(--primary-text);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-input: var(--border-line);
+  --color-ring: var(--primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
