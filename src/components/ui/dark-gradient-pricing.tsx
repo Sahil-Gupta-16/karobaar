@@ -9,21 +9,22 @@ import { Card } from "@/components/ui/card"
 interface BenefitProps {
   text: string
   checked: boolean
+  highlight?: boolean
 }
 
-const Benefit = ({ text, checked }: BenefitProps) => {
+const Benefit = ({ text, checked, highlight }: BenefitProps) => {
   return (
     <div className="flex items-center gap-3">
       {checked ? (
-        <span className="grid size-4 place-content-center rounded-full bg-primary text-sm text-primary-foreground">
+        <span className={cn("grid size-4 place-content-center rounded-full text-sm text-primary-foreground shrink-0", highlight ? "bg-accent" : "bg-primary")}>
           <Check className="size-2.5 stroke-[3px]" />
         </span>
       ) : (
-        <span className="grid size-4 place-content-center rounded-full bg-foreground/10 text-sm text-foreground/40">
+        <span className="grid size-4 place-content-center rounded-full bg-foreground/10 text-sm text-foreground/40 shrink-0">
           <X className="size-2.5 stroke-[3px]" />
         </span>
       )}
-      <span className="text-sm text-foreground/80">{text}</span>
+      <span className={cn("text-sm", highlight ? "text-accent font-bold" : "text-foreground/80")}>{text}</span>
     </div>
   )
 }
@@ -33,7 +34,7 @@ interface PricingCardProps {
   price: string
   bestFor: string
   CTA: string
-  benefits: Array<{ text: string; checked: boolean }>
+  benefits: Array<{ text: string; checked: boolean; highlight?: boolean }>
   className?: string
 }
 
@@ -45,7 +46,7 @@ export const PricingCard = ({
   benefits,
   className,
 }: PricingCardProps) => {
-  const isPro = tier === "Pro";
+  const isPro = tier === "Pro" || tier === "Growth";
   return (
     <motion.div
       initial={{ filter: "blur(2px)", opacity: 0, y: 20 }}
@@ -65,7 +66,7 @@ export const PricingCard = ({
       >
         {isPro && (
           <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] font-bold px-3 py-1 rounded-bl-lg tracking-wider">
-            MOST POPULAR
+            RECOMMENDED
           </div>
         )}
         
