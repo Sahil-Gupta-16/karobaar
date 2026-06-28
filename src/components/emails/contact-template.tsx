@@ -5,20 +5,26 @@ interface ContactEmailTemplateProps {
   name: string;
   email: string;
   message: string;
+  company?: string;
+  teamSize?: string;
+  purpose?: string;
 }
 
 export const ContactEmailTemplate: React.FC<Readonly<ContactEmailTemplateProps>> = ({
   name,
   email,
   message,
+  company,
+  teamSize,
+  purpose,
 }) => (
   <Html>
     <Head />
-    <Preview>New Demo Request from {name}</Preview>
+    <Preview>New Inquiry from {name}</Preview>
     <Body style={main}>
       <Container style={container}>
         <Section style={box}>
-          <Heading style={h1}>New Demo Request</Heading>
+          <Heading style={h1}>New Inquiry: {purpose || 'General'}</Heading>
           <Hr style={hr} />
           <Text style={paragraph}>
             <b>Name:</b> {name}
@@ -26,6 +32,21 @@ export const ContactEmailTemplate: React.FC<Readonly<ContactEmailTemplateProps>>
           <Text style={paragraph}>
             <b>Email:</b> {email}
           </Text>
+          {company && (
+            <Text style={paragraph}>
+              <b>Company:</b> {company}
+            </Text>
+          )}
+          {teamSize && (
+            <Text style={paragraph}>
+              <b>Team Size:</b> {teamSize}
+            </Text>
+          )}
+          {purpose && (
+            <Text style={paragraph}>
+              <b>Purpose:</b> {purpose}
+            </Text>
+          )}
           <Text style={paragraph}>
             <b>Message:</b>
             <br />

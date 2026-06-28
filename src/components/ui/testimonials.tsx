@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 
-import { X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -31,10 +30,6 @@ export function Testimonials({
   maxDisplayed = 6,
 }: TestimonialsProps) {
   const [showAll, setShowAll] = useState(false)
-
-  const openInNewTab = (url: string) => {
-    window.open(url, "_blank")?.focus()
-  }
 
   return (
     <div className={className}>
@@ -77,7 +72,7 @@ export function Testimonials({
                       {testimonial.name}
                     </span>
                     <span className="text-sm text-muted-foreground">
-                      {testimonial.username}
+                      {testimonial.username} @ {testimonial.social}
                     </span>
                   </div>
                 </div>
@@ -86,13 +81,6 @@ export function Testimonials({
                     {testimonial.text}
                   </p>
                 </div>
-                <button
-                  onClick={() => openInNewTab(testimonial.social)}
-                  className="absolute top-4 right-4 text-foreground/40 hover:text-accent transition-colors"
-                  aria-label={`Open ${testimonial.name}'s profile`}
-                >
-                  <X className="h-4 w-4" aria-hidden="true" />
-                </button>
               </Card>
             ))}
         </div>

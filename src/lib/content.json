@@ -26,7 +26,7 @@
     },
     "ctaSecondary": {
       "label": "Book a demo",
-      "href": "#demo"
+      "href": "/signup"
     },
     "demoVideoSrc": "/demo-loop.mp4"
   },
@@ -130,21 +130,33 @@
         "number": "01",
         "title": "Custom Pipeline Builder",
         "description": "Don't force your sales process into rigid boxes. Build custom stages, triggers, and workflows that match exactly how your business operates.",
-        "bullets": ["Drag-and-drop stage builder", "Custom automation triggers", "Visual workflow mapping"],
+        "bullets": [
+          "Drag-and-drop stage builder",
+          "Custom automation triggers",
+          "Visual workflow mapping"
+        ],
         "mediaSrc": "/pipeline-builder.mp4"
       },
       {
         "number": "02",
         "title": "GST-Ready Billing Engine",
         "description": "Don't just send quotes, get paid. Convert winning quotations into GST-compliant invoices instantly.",
-        "bullets": ["Auto-calculated GST", "Custom invoice templates", "Payment status tracking"],
+        "bullets": [
+          "Auto-calculated GST",
+          "Custom invoice templates",
+          "Payment status tracking"
+        ],
         "mediaSrc": "/billing-preview.mp4"
       },
       {
         "number": "03",
         "title": "Access Control & Activity Logs",
         "description": "Control exactly who sees what and track every single action taken across your organization.",
-        "bullets": ["Role-based permissions", "Immutable audit trails", "Team performance tracking"],
+        "bullets": [
+          "Role-based permissions",
+          "Immutable audit trails",
+          "Team performance tracking"
+        ],
         "mediaSrc": "/security-preview.mp4"
       }
     ]
@@ -154,10 +166,34 @@
     "headline": "See how we stack up.",
     "competitors": ["Karobaar", "Salesforce", "HubSpot", "Zoho"],
     "rows": [
-      { "feature": "Customizability", "Karobaar": true, "Salesforce": true, "HubSpot": false, "Zoho": true },
-      { "feature": "Built-in Payroll", "Karobaar": true, "Salesforce": false, "HubSpot": false, "Zoho": false },
-      { "feature": "India Compliance", "Karobaar": true, "Salesforce": false, "HubSpot": false, "Zoho": true },
-      { "feature": "Zero Real-time Sync", "Karobaar": true, "Salesforce": false, "HubSpot": false, "Zoho": false }
+      {
+        "feature": "Customizability",
+        "Karobaar": true,
+        "Salesforce": true,
+        "HubSpot": false,
+        "Zoho": true
+      },
+      {
+        "feature": "Built-in Payroll",
+        "Karobaar": true,
+        "Salesforce": false,
+        "HubSpot": false,
+        "Zoho": false
+      },
+      {
+        "feature": "India Compliance",
+        "Karobaar": true,
+        "Salesforce": false,
+        "HubSpot": false,
+        "Zoho": true
+      },
+      {
+        "feature": "Zero Real-time Sync",
+        "Karobaar": true,
+        "Salesforce": false,
+        "HubSpot": false,
+        "Zoho": false
+      }
     ]
   },
   "testimonialsGrid": {
@@ -168,14 +204,14 @@
         "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
         "text": "Karobaar completely transformed how we manage our media production pipelines. The custom workflows are a lifesaver.",
         "name": "Ankit",
-        "username": "Co-Founder",
-        "social": "Local Logic Media"
+        "username": "CEO",
+        "social": "LocalLogic Media"
       },
       {
         "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
         "text": "Before this CRM, our leads were scattered across WhatsApp and Excel. Now everything is unified and our win rate is up 30%.",
         "name": "Aryan Bhosle",
-        "username": "Co-Founder",
+        "username": "CEO",
         "social": "Local Logic Studios"
       },
       {
@@ -183,13 +219,6 @@
         "text": "The GST-ready billing engine alone is worth it. It automatically syncs with our deal stages. Fantastic platform for Indian tech businesses.",
         "name": "VikasRaj Yadav",
         "username": "CEO",
-        "social": "Square Technologies"
-      },
-      {
-        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
-        "text": "The custom pipeline builder allows us to define our exact sales process without fighting the software. Highly recommended.",
-        "name": "Rohan Gupta",
-        "username": "CTO",
         "social": "Square Technologies"
       }
     ]
