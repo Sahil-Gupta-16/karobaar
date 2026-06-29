@@ -1,8 +1,17 @@
 "use client";
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ArrowRight, CheckCircle2, IndianRupee, Users, MousePointer, Search, Loader2 } from 'lucide-react';
-import content from '@/lib/content.json';
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  X,
+  ArrowRight,
+  CheckCircle2,
+  IndianRupee,
+  Users,
+  MousePointer,
+  Search,
+  Loader2,
+} from "lucide-react";
+import content from "@/lib/content.json";
 
 // 1. KANBAN STATE-MACHINE ANIMATION
 const KanbanMockup = () => {
@@ -13,7 +22,10 @@ const KanbanMockup = () => {
     const interval = setInterval(() => {
       setStep((prev) => (prev + 1) % 5);
     }, 1800);
-    return () => { clearTimeout(timer); clearInterval(interval); };
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -21,11 +33,13 @@ const KanbanMockup = () => {
       <div className="flex gap-3 h-full">
         {/* Column 1: WhatsApp Ingress */}
         <div className="w-1/3 h-full space-y-2 border-r border-border/30 pr-2">
-          <span className="text-[10px] font-mono text-muted-foreground uppercase block">WhatsApp</span>
-          
+          <span className="text-[10px] font-mono text-muted-foreground uppercase block">
+            WhatsApp
+          </span>
+
           <AnimatePresence>
             {step === 1 && (
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
@@ -36,7 +50,9 @@ const KanbanMockup = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
                   <span className="text-[8px] font-bold text-foreground">New Chat</span>
                 </div>
-                <p className="text-[9px] text-foreground/80 leading-tight">&ldquo;Ready to buy!&rdquo;</p>
+                <p className="text-[9px] text-foreground/80 leading-tight">
+                  &ldquo;Ready to buy!&rdquo;
+                </p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -44,11 +60,13 @@ const KanbanMockup = () => {
 
         {/* Column 2: Active Pipeline */}
         <div className="w-1/3 h-full space-y-2 border-r border-border/30 px-2 flex flex-col justify-start">
-          <span className="text-[10px] font-mono text-muted-foreground uppercase block">Pipeline</span>
-          
+          <span className="text-[10px] font-mono text-muted-foreground uppercase block">
+            Pipeline
+          </span>
+
           <AnimatePresence>
             {step === 2 && (
-              <motion.div 
+              <motion.div
                 initial={{ x: -60, opacity: 0, scale: 0.9 }}
                 animate={{ x: 0, opacity: 1, scale: 1 }}
                 exit={{ x: 60, opacity: 0, scale: 0.9 }}
@@ -57,7 +75,9 @@ const KanbanMockup = () => {
               >
                 <div className="flex justify-between items-center">
                   <span className="text-[9px] font-bold">Verma Deal</span>
-                  <span className="text-[7px] bg-primary text-primary-foreground px-1 rounded font-mono">Negotiation</span>
+                  <span className="text-[7px] bg-primary text-primary-foreground px-1 rounded font-mono">
+                    Negotiation
+                  </span>
                 </div>
                 <div className="w-full h-1 bg-foreground/20 rounded" />
                 {/* Virtual Cursor Dragging */}
@@ -75,11 +95,13 @@ const KanbanMockup = () => {
 
         {/* Column 3: Closed Won */}
         <div className="w-1/3 h-full space-y-2 pl-2">
-          <span className="text-[10px] font-mono text-muted-foreground uppercase block">Won Deals</span>
-          
+          <span className="text-[10px] font-mono text-muted-foreground uppercase block">
+            Won Deals
+          </span>
+
           <AnimatePresence>
             {step === 3 && (
-              <motion.div 
+              <motion.div
                 initial={{ x: -60, opacity: 0, scale: 0.9 }}
                 animate={{ x: 0, opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -88,7 +110,9 @@ const KanbanMockup = () => {
               >
                 <div className="flex justify-between items-center">
                   <span className="text-[9px] font-bold text-green-500">Won!</span>
-                  <span className="text-[8px] bg-green-500/20 text-green-400 px-1 rounded font-mono">Rs.25,000</span>
+                  <span className="text-[8px] bg-green-500/20 text-green-400 px-1 rounded font-mono">
+                    Rs.25,000
+                  </span>
                 </div>
                 <div className="w-full h-1 bg-green-500/20 rounded" />
               </motion.div>
@@ -96,7 +120,7 @@ const KanbanMockup = () => {
           </AnimatePresence>
         </div>
       </div>
-      
+
       <div className="absolute bottom-2 left-4 right-4 bg-background/80 border border-border rounded px-2.5 py-1 text-[9px] text-muted-foreground flex justify-between items-center">
         <span>
           {step === 0 && "Waiting for incoming events..."}
@@ -105,7 +129,9 @@ const KanbanMockup = () => {
           {step === 3 && "Step 3: Closed Won deals track directly in revenue"}
           {step === 4 && "Success: Lead logged and won without manual input!"}
         </span>
-        <CheckCircle2 className={`w-3.5 h-3.5 ${step === 4 ? 'text-green-500' : 'text-muted-foreground'}`} />
+        <CheckCircle2
+          className={`w-3.5 h-3.5 ${step === 4 ? "text-green-500" : "text-muted-foreground"}`}
+        />
       </div>
     </div>
   );
@@ -120,7 +146,10 @@ const ProfileMockup = () => {
     const interval = setInterval(() => {
       setStep((prev) => (prev + 1) % 5);
     }, 1800);
-    return () => { clearTimeout(timer); clearInterval(interval); };
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -130,7 +159,7 @@ const ProfileMockup = () => {
         <div className="flex-grow flex flex-col justify-center items-center gap-3">
           <div className="flex items-center gap-2 border border-border rounded-lg bg-background px-3 py-1.5 w-3/4 relative">
             <Search className="w-3.5 h-3.5 text-muted-foreground" />
-            <motion.span 
+            <motion.span
               initial={{ width: 0 }}
               animate={{ width: "auto" }}
               transition={{ ease: "easeOut", duration: 0.8 }}
@@ -146,7 +175,9 @@ const ProfileMockup = () => {
               <MousePointer className="w-3.5 h-3.5 fill-current" />
             </motion.div>
           </div>
-          <span className="text-[10px] text-muted-foreground font-mono">Searching customer ledger...</span>
+          <span className="text-[10px] text-muted-foreground font-mono">
+            Searching customer ledger...
+          </span>
         </div>
       )}
 
@@ -165,7 +196,7 @@ const ProfileMockup = () => {
 
           <div className="flex-grow py-2 space-y-1.5 overflow-hidden">
             {step >= 1 && (
-              <motion.div 
+              <motion.div
                 initial={{ x: -10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ type: "spring", bounce: 0.3, duration: 0.5 }}
@@ -178,7 +209,7 @@ const ProfileMockup = () => {
             )}
 
             {step >= 2 && (
-              <motion.div 
+              <motion.div
                 initial={{ x: -10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ type: "spring", bounce: 0.3, duration: 0.5 }}
@@ -191,7 +222,7 @@ const ProfileMockup = () => {
             )}
 
             {step >= 3 && (
-              <motion.div 
+              <motion.div
                 initial={{ x: -10, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ type: "spring", bounce: 0.3, duration: 0.5 }}
@@ -214,7 +245,9 @@ const ProfileMockup = () => {
           {step === 3 && "Loading 3: Accounting, direct UPI settlement"}
           {step === 4 && "Ledger Sync complete! 360-degree visibility."}
         </span>
-        <CheckCircle2 className={`w-3.5 h-3.5 ${step === 4 ? 'text-green-500' : 'text-muted-foreground'}`} />
+        <CheckCircle2
+          className={`w-3.5 h-3.5 ${step === 4 ? "text-green-500" : "text-muted-foreground"}`}
+        />
       </div>
     </div>
   );
@@ -229,7 +262,10 @@ const InvoiceMockup = () => {
     const interval = setInterval(() => {
       setStep((prev) => (prev + 1) % 6);
     }, 1800);
-    return () => { clearTimeout(timer); clearInterval(interval); };
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -237,7 +273,9 @@ const InvoiceMockup = () => {
       {/* Header */}
       <div className="flex justify-between items-center border-b border-border pb-2.5">
         <div className="space-y-0.5">
-          <span className="text-[9px] font-mono text-muted-foreground uppercase">1-Click Billing</span>
+          <span className="text-[9px] font-mono text-muted-foreground uppercase">
+            1-Click Billing
+          </span>
           <h4 className="text-xs font-semibold">Auto-Generated Invoice</h4>
         </div>
         <div className="w-7 h-7 bg-primary/5 rounded-full border border-border flex items-center justify-center">
@@ -254,7 +292,7 @@ const InvoiceMockup = () => {
         {step >= 1 && (
           <div className="flex justify-between text-[11px] items-center">
             <span className="text-muted-foreground">Client Profile:</span>
-            <motion.span 
+            <motion.span
               initial={{ x: -10, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ type: "spring", bounce: 0.3, duration: 0.5 }}
@@ -268,7 +306,7 @@ const InvoiceMockup = () => {
         {step >= 2 && (
           <div className="flex justify-between text-[11px] items-center">
             <span className="text-muted-foreground">Billing Item:</span>
-            <motion.span 
+            <motion.span
               initial={{ x: -10, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ type: "spring", bounce: 0.3, duration: 0.5 }}
@@ -282,7 +320,7 @@ const InvoiceMockup = () => {
         {step >= 3 && (
           <div className="flex justify-between text-[11px] items-center">
             <span className="text-muted-foreground">GST Addition (18%):</span>
-            <motion.span 
+            <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4 }}
@@ -297,7 +335,7 @@ const InvoiceMockup = () => {
       {/* Bottom Success / CTA Trigger */}
       <div className="flex justify-between items-center border-t border-border pt-2.5">
         {step >= 5 ? (
-          <motion.div 
+          <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ type: "spring", bounce: 0.4, duration: 0.6 }}
@@ -326,7 +364,7 @@ const InvoiceMockup = () => {
       {/* Virtual click trigger */}
       <AnimatePresence>
         {step === 3 && (
-          <motion.div 
+          <motion.div
             initial={{ scale: 1, opacity: 0 }}
             animate={{ scale: [1, 1.5, 1], opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -361,7 +399,10 @@ const PayrollMockup = () => {
     const interval = setInterval(() => {
       setStep((prev) => (prev + 1) % 6);
     }, 1800);
-    return () => { clearTimeout(timer); clearInterval(interval); };
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -369,7 +410,9 @@ const PayrollMockup = () => {
       {/* Header */}
       <div className="flex items-center justify-between border-b border-border pb-2.5">
         <div className="space-y-0.5">
-          <span className="text-[9px] font-mono text-muted-foreground uppercase">Real-Time Payroll</span>
+          <span className="text-[9px] font-mono text-muted-foreground uppercase">
+            Real-Time Payroll
+          </span>
           <h4 className="text-xs font-semibold">Zero-Entry Payroll calculator</h4>
         </div>
         <span className="text-[9px] bg-primary/10 border border-border text-foreground px-2 py-0.5 rounded font-mono">
@@ -383,11 +426,21 @@ const PayrollMockup = () => {
         <div className="bg-background border border-border rounded-lg p-2 flex flex-col items-center gap-1.5 text-[9px]">
           <span className="text-muted-foreground font-mono text-[8px]">Attendance Sync</span>
           <div className="flex gap-0.5 font-bold">
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
-            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>Y</span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>
+              Y
+            </span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>
+              Y
+            </span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>
+              Y
+            </span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>
+              Y
+            </span>
+            <span className={step >= 1 ? "text-green-500" : "text-muted-foreground opacity-30"}>
+              Y
+            </span>
           </div>
         </div>
 
@@ -395,7 +448,7 @@ const PayrollMockup = () => {
         <div className="flex flex-col items-center flex-grow relative px-1">
           <div className="w-full h-0.5 bg-border relative overflow-hidden">
             {step === 2 && (
-              <motion.div 
+              <motion.div
                 initial={{ left: "-100%" }}
                 animate={{ left: "100%" }}
                 transition={{ duration: 1.5, ease: "linear" }}
@@ -425,7 +478,7 @@ const PayrollMockup = () => {
           {step === 4 && "5. Disbursing: Releasing direct payout..."}
           {step === 5 && "6. Payout complete! Direct disbursal successful."}
         </span>
-        
+
         {step === 5 ? (
           <span className="text-[8px] bg-green-500/20 text-green-500 px-1.5 py-0.5 rounded font-extrabold font-mono animate-bounce">
             PAID
@@ -442,13 +495,13 @@ const PayrollMockup = () => {
 
 const MockupVisuals = ({ type }: { type: string }) => {
   switch (type) {
-    case 'kanban':
+    case "kanban":
       return <KanbanMockup />;
-    case 'profile':
+    case "profile":
       return <ProfileMockup />;
-    case 'invoice':
+    case "invoice":
       return <InvoiceMockup />;
-    case 'payroll':
+    case "payroll":
       return <PayrollMockup />;
     default:
       return null;
@@ -466,46 +519,54 @@ export function ProblemSolution() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">{kicker}</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">{headline}</h2>
+          <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">
+            {kicker}
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+            {headline}
+          </h2>
         </div>
 
         {/* The Master Container */}
         <div className="relative rounded-[2rem] border border-border bg-surface/30 shadow-2xl overflow-hidden backdrop-blur-sm">
-          
           <div className="grid grid-cols-1 lg:grid-cols-12 relative min-h-[500px]">
-            
             {/* LEFT: The Problem Selection (Interactive) */}
             <div className="lg:col-span-5 p-8 lg:p-12 relative bg-gradient-to-br from-background via-surface to-background border-r border-border/50">
               <div className="absolute top-0 left-0 w-full h-full bg-red-950/5 pointer-events-none" />
-              
+
               <div className="relative z-10">
                 <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-mono uppercase tracking-widest mb-8">
                   {without.title}
                 </div>
-                
+
                 <div className="space-y-3 relative">
                   {without.painPoints.map((point: string, idx: number) => {
                     const isActive = idx === activeIndex;
                     return (
-                      <div 
-                        key={idx} 
+                      <div
+                        key={idx}
                         onClick={() => setActiveIndex(idx)}
                         onMouseEnter={() => setActiveIndex(idx)}
                         className={`flex items-start gap-4 p-4 rounded-xl cursor-pointer transition-all duration-300 border ${
-                          isActive 
-                            ? 'bg-red-500/5 border-red-500/20 shadow-[0_0_15px_rgba(239,68,68,0.05)]' 
-                            : 'bg-transparent border-transparent hover:bg-surface/50 opacity-60 hover:opacity-100'
+                          isActive
+                            ? "bg-red-500/5 border-red-500/20 shadow-[0_0_15px_rgba(239,68,68,0.05)]"
+                            : "bg-transparent border-transparent hover:bg-surface/50 opacity-60 hover:opacity-100"
                         }`}
                       >
-                        <div className={`mt-0.5 p-1.5 rounded-full transition-colors ${
-                          isActive ? 'bg-red-500/20 text-red-500' : 'bg-surface border border-border text-foreground/40'
-                        }`}>
+                        <div
+                          className={`mt-0.5 p-1.5 rounded-full transition-colors ${
+                            isActive
+                              ? "bg-red-500/20 text-red-500"
+                              : "bg-surface border border-border text-foreground/40"
+                          }`}
+                        >
                           <X className="w-4 h-4" />
                         </div>
-                        <span className={`font-medium leading-relaxed transition-colors ${
-                          isActive ? 'text-foreground' : 'text-foreground/70'
-                        }`}>
+                        <span
+                          className={`font-medium leading-relaxed transition-colors ${
+                            isActive ? "text-foreground" : "text-foreground/70"
+                          }`}
+                        >
                           {point}
                         </span>
                       </div>
@@ -518,7 +579,7 @@ export function ProblemSolution() {
             {/* CENTER: The Divider */}
             <div className="hidden lg:flex absolute top-0 bottom-0 left-[41.666%] -ml-[24px] w-[48px] items-center justify-center z-20">
               <div className="w-full h-full absolute inset-0 bg-gradient-to-b from-transparent via-border to-transparent w-px left-1/2 -translate-x-1/2" />
-              
+
               <div className="w-12 h-12 rounded-full bg-surface border border-border shadow-sm flex items-center justify-center relative bg-gradient-to-br from-surface to-background z-10">
                 <div className="absolute inset-0 rounded-full border border-primary/20 blur-sm" />
                 <ArrowRight className="w-5 h-5 text-primary" />
@@ -528,7 +589,7 @@ export function ProblemSolution() {
             {/* RIGHT: The Solution Reveal (How it works) */}
             <div className="lg:col-span-7 p-8 lg:p-12 relative bg-gradient-to-br from-primary/5 via-background to-background flex flex-col justify-center">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-foreground/5 blur-[100px] rounded-full pointer-events-none" />
-              
+
               <div className="relative z-10 w-full">
                 <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-primary/10 border border-border text-foreground text-xs font-mono uppercase tracking-widest mb-8">
                   {solution.title}
@@ -565,7 +626,6 @@ export function ProblemSolution() {
                 </AnimatePresence>
               </div>
             </div>
-
           </div>
         </div>
       </div>

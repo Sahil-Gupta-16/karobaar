@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 interface Testimonial {
-  image: string
-  name: string
-  username: string
-  text: string
-  social: string
+  image: string;
+  name: string;
+  username: string;
+  text: string;
+  social: string;
 }
 
 interface TestimonialsProps {
-  testimonials: Testimonial[]
-  className?: string
-  title?: string
-  description?: string
-  maxDisplayed?: number
+  testimonials: Testimonial[];
+  className?: string;
+  title?: string;
+  description?: string;
+  maxDisplayed?: number;
 }
 
 export function Testimonials({
@@ -29,7 +29,7 @@ export function Testimonials({
   description = "Dummy feedback from virtual customers using our component library.",
   maxDisplayed = 6,
 }: TestimonialsProps) {
-  const [showAll, setShowAll] = useState(false)
+  const [showAll, setShowAll] = useState(false);
 
   return (
     <div className={className}>
@@ -51,38 +51,34 @@ export function Testimonials({
         <div
           className={cn(
             "flex justify-center items-center gap-5 flex-wrap",
-            !showAll &&
-              testimonials.length > maxDisplayed &&
-              "max-h-[720px] overflow-hidden",
+            !showAll && testimonials.length > maxDisplayed && "max-h-[720px] overflow-hidden",
           )}
         >
-          {testimonials
-            .slice(0, showAll ? undefined : maxDisplayed)
-            .map((testimonial, index) => (
-              <Card
-                key={index}
-                className="w-80 h-auto p-5 relative bg-card border-border shadow-md"
-              >
-                <div className="flex items-center">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/20 text-accent flex items-center justify-center font-bold text-lg border border-accent/30">
-                    {testimonial.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
-                  </div>
-                  <div className="flex flex-col pl-4">
-                    <span className="font-semibold text-base text-foreground">
-                      {testimonial.name}
-                    </span>
-                    <span className="text-sm text-muted-foreground">
-                      {testimonial.username} @ {testimonial.social}
-                    </span>
-                  </div>
+          {testimonials.slice(0, showAll ? undefined : maxDisplayed).map((testimonial, index) => (
+            <Card key={index} className="w-80 h-auto p-5 relative bg-card border-border shadow-md">
+              <div className="flex items-center">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-accent/20 text-accent flex items-center justify-center font-bold text-lg border border-accent/30">
+                  {testimonial.name
+                    .split(" ")
+                    .map((n) => n[0])
+                    .join("")
+                    .substring(0, 2)
+                    .toUpperCase()}
                 </div>
-                <div className="mt-5 mb-5">
-                  <p className="text-foreground/80 font-medium leading-relaxed">
-                    {testimonial.text}
-                  </p>
+                <div className="flex flex-col pl-4">
+                  <span className="font-semibold text-base text-foreground">
+                    {testimonial.name}
+                  </span>
+                  <span className="text-sm text-muted-foreground">
+                    {testimonial.username} @ {testimonial.social}
+                  </span>
                 </div>
-              </Card>
-            ))}
+              </div>
+              <div className="mt-5 mb-5">
+                <p className="text-foreground/80 font-medium leading-relaxed">{testimonial.text}</p>
+              </div>
+            </Card>
+          ))}
         </div>
 
         {testimonials.length > maxDisplayed && !showAll && (
@@ -97,5 +93,5 @@ export function Testimonials({
         )}
       </div>
     </div>
-  )
+  );
 }

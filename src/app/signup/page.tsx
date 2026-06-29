@@ -1,10 +1,20 @@
-'use client';
+"use client";
 
-import React, { useState, useTransition } from 'react';
-import Link from 'next/link';
-import { ArrowLeft, CheckCircle, Loader2, Building, Users, Mail, User, MessageSquare, HelpCircle } from 'lucide-react';
-import SoftAurora from '@/components/SoftAurora';
-import { submitContactForm } from '@/actions/contact';
+import React, { useState, useTransition } from "react";
+import Link from "next/link";
+import {
+  ArrowLeft,
+  CheckCircle,
+  Loader2,
+  Building,
+  Users,
+  Mail,
+  User,
+  MessageSquare,
+  HelpCircle,
+} from "lucide-react";
+import SoftAurora from "@/components/SoftAurora";
+import { submitContactForm } from "@/actions/contact";
 
 export default function SignupPage() {
   const [isPending, startTransition] = useTransition();
@@ -12,17 +22,19 @@ export default function SignupPage() {
   const [error, setError] = useState<string | null>(null);
 
   const [formValues, setFormValues] = useState({
-    name: '',
-    email: '',
-    company: '',
-    teamSize: '1-10',
-    purpose: 'Get Started',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    teamSize: "1-10",
+    purpose: "Get Started",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormValues(prev => ({ ...prev, [name]: value }));
+    setFormValues((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -30,24 +42,24 @@ export default function SignupPage() {
     setError(null);
 
     if (!formValues.name || !formValues.email) {
-      setError('Name and email are required.');
+      setError("Name and email are required.");
       return;
     }
 
     startTransition(async () => {
       const formData = new FormData();
-      formData.append('name', formValues.name);
-      formData.append('email', formValues.email);
-      formData.append('company', formValues.company);
-      formData.append('teamSize', formValues.teamSize);
-      formData.append('purpose', formValues.purpose);
-      formData.append('message', formValues.message);
+      formData.append("name", formValues.name);
+      formData.append("email", formValues.email);
+      formData.append("company", formValues.company);
+      formData.append("teamSize", formValues.teamSize);
+      formData.append("purpose", formValues.purpose);
+      formData.append("message", formValues.message);
 
       const result = await submitContactForm(formData);
       if (result.success) {
         setSuccess(true);
       } else {
-        setError(result.error || 'Something went wrong. Please try again.');
+        setError(result.error || "Something went wrong. Please try again.");
       }
     });
   };
@@ -60,8 +72,8 @@ export default function SignupPage() {
           speed={0.4}
           scale={1.3}
           brightness={1.0}
-          color1="#4f4f5a" 
-          color2="#08080a" 
+          color1="#4f4f5a"
+          color2="#08080a"
           enableMouseInteraction={true}
           mouseInfluence={0.3}
           bandSpread={1.5}
@@ -72,8 +84,8 @@ export default function SignupPage() {
       <div className="relative z-10 max-w-xl w-full mx-auto space-y-8">
         {/* Back Button */}
         <div>
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="inline-flex items-center gap-2 text-sm font-medium text-foreground/60 hover:text-foreground transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
@@ -85,12 +97,14 @@ export default function SignupPage() {
         <div className="bg-surface/40 backdrop-blur-xl border border-border/80 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
           {/* Subtle Ambient glow */}
           <div className="absolute -top-12 -right-12 w-40 h-40 bg-accent/15 blur-3xl rounded-full" />
-          
+
           <div className="relative z-10">
             {!success ? (
               <>
                 <div className="text-center mb-8">
-                  <h1 className="text-3xl font-bold tracking-tight text-foreground mb-2">Connect with Karobaar</h1>
+                  <h1 className="text-3xl font-bold tracking-tight text-foreground mb-2">
+                    Connect with Karobaar
+                  </h1>
                   <p className="text-sm text-foreground/60">
                     Tell us about your team and we&apos;ll get you set up in no time.
                   </p>
@@ -105,7 +119,10 @@ export default function SignupPage() {
 
                   {/* Name field */}
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block">
+                    <label
+                      htmlFor="name"
+                      className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block"
+                    >
                       Full Name *
                     </label>
                     <div className="relative">
@@ -127,7 +144,10 @@ export default function SignupPage() {
 
                   {/* Email field */}
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block">
+                    <label
+                      htmlFor="email"
+                      className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block"
+                    >
                       Work Email *
                     </label>
                     <div className="relative">
@@ -151,7 +171,10 @@ export default function SignupPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {/* Company field */}
                     <div className="space-y-2">
-                      <label htmlFor="company" className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block">
+                      <label
+                        htmlFor="company"
+                        className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block"
+                      >
                         Company Name
                       </label>
                       <div className="relative">
@@ -172,7 +195,10 @@ export default function SignupPage() {
 
                     {/* Team Size */}
                     <div className="space-y-2">
-                      <label htmlFor="teamSize" className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block">
+                      <label
+                        htmlFor="teamSize"
+                        className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block"
+                      >
                         Team Size
                       </label>
                       <div className="relative">
@@ -197,7 +223,10 @@ export default function SignupPage() {
 
                   {/* Purpose Selection */}
                   <div className="space-y-2">
-                    <label htmlFor="purpose" className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block">
+                    <label
+                      htmlFor="purpose"
+                      className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block"
+                    >
                       I want to...
                     </label>
                     <div className="relative">
@@ -220,7 +249,10 @@ export default function SignupPage() {
 
                   {/* Message field */}
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block">
+                    <label
+                      htmlFor="message"
+                      className="text-xs font-semibold uppercase tracking-wider text-foreground/60 block"
+                    >
                       Requirements or Message
                     </label>
                     <div className="relative">
@@ -262,9 +294,12 @@ export default function SignupPage() {
                   <CheckCircle className="w-16 h-16 text-green-500 animate-bounce" />
                 </div>
                 <div className="space-y-2">
-                  <h1 className="text-2xl font-bold tracking-tight text-foreground">Inquiry Received!</h1>
+                  <h1 className="text-2xl font-bold tracking-tight text-foreground">
+                    Inquiry Received!
+                  </h1>
                   <p className="text-sm text-foreground/60 max-w-md mx-auto">
-                    Thank you for reaching out. We have sent your details to our team, and we will get back to you within 24 business hours.
+                    Thank you for reaching out. We have sent your details to our team, and we will
+                    get back to you within 24 business hours.
                   </p>
                 </div>
                 <div className="pt-4">

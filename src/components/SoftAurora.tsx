@@ -1,5 +1,5 @@
-import { Renderer, Program, Mesh, Triangle } from 'ogl';
-import { useEffect, useRef } from 'react';
+import { Renderer, Program, Mesh, Triangle } from "ogl";
+import { useEffect, useRef } from "react";
 
 interface SoftAuroraProps {
   speed?: number;
@@ -19,11 +19,11 @@ interface SoftAuroraProps {
 }
 
 function hexToVec3(hex: string): [number, number, number] {
-  const h = hex.replace('#', '');
+  const h = hex.replace("#", "");
   return [
     parseInt(h.slice(0, 2), 16) / 255,
     parseInt(h.slice(2, 4), 16) / 255,
-    parseInt(h.slice(4, 6), 16) / 255
+    parseInt(h.slice(4, 6), 16) / 255,
   ];
 }
 
@@ -164,8 +164,8 @@ export default function SoftAurora({
   speed = 0.6,
   scale = 1.5,
   brightness = 1.0,
-  color1 = '#f7f7f7',
-  color2 = '#e100ff',
+  color1 = "#f7f7f7",
+  color2 = "#e100ff",
   noiseFrequency = 2.5,
   noiseAmplitude = 1.0,
   bandHeight = 0.5,
@@ -174,7 +174,7 @@ export default function SoftAurora({
   layerOffset = 0,
   colorSpeed = 1.0,
   enableMouseInteraction = true,
-  mouseInfluence = 0.25
+  mouseInfluence = 0.25,
 }: SoftAuroraProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -205,7 +205,9 @@ export default function SoftAurora({
       fragment: fragmentShader,
       uniforms: {
         uTime: { value: 0 },
-        uResolution: { value: [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height] },
+        uResolution: {
+          value: [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height],
+        },
         uSpeed: { value: speed },
         uScale: { value: scale },
         uBrightness: { value: brightness },
@@ -220,8 +222,8 @@ export default function SoftAurora({
         uColorSpeed: { value: colorSpeed },
         uMouse: { value: new Float32Array([0.5, 0.5]) },
         uMouseInfluence: { value: mouseInfluence },
-        uEnableMouse: { value: enableMouseInteraction }
-      }
+        uEnableMouse: { value: enableMouseInteraction },
+      },
     });
 
     const mesh = new Mesh(gl, { geometry, program });
@@ -229,14 +231,18 @@ export default function SoftAurora({
 
     function resize() {
       renderer.setSize(container.offsetWidth, container.offsetHeight);
-      program.uniforms.uResolution.value = [gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height];
+      program.uniforms.uResolution.value = [
+        gl.canvas.width,
+        gl.canvas.height,
+        gl.canvas.width / gl.canvas.height,
+      ];
     }
-    window.addEventListener('resize', resize);
+    window.addEventListener("resize", resize);
     resize();
 
     if (enableMouseInteraction) {
-      gl.canvas.addEventListener('mousemove', handleMouseMove);
-      gl.canvas.addEventListener('mouseleave', handleMouseLeave);
+      gl.canvas.addEventListener("mousemove", handleMouseMove);
+      gl.canvas.addEventListener("mouseleave", handleMouseLeave);
     }
 
     let animationFrameId: number;
@@ -261,15 +267,30 @@ export default function SoftAurora({
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      window.removeEventListener('resize', resize);
+      window.removeEventListener("resize", resize);
       if (enableMouseInteraction) {
-        gl.canvas.removeEventListener('mousemove', handleMouseMove);
-        gl.canvas.removeEventListener('mouseleave', handleMouseLeave);
+        gl.canvas.removeEventListener("mousemove", handleMouseMove);
+        gl.canvas.removeEventListener("mouseleave", handleMouseLeave);
       }
       container.removeChild(gl.canvas);
-      gl.getExtension('WEBGL_lose_context')?.loseContext();
+      gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
-  }, [speed, scale, brightness, color1, color2, noiseFrequency, noiseAmplitude, bandHeight, bandSpread, octaveDecay, layerOffset, colorSpeed, enableMouseInteraction, mouseInfluence]);
+  }, [
+    speed,
+    scale,
+    brightness,
+    color1,
+    color2,
+    noiseFrequency,
+    noiseAmplitude,
+    bandHeight,
+    bandSpread,
+    octaveDecay,
+    layerOffset,
+    colorSpeed,
+    enableMouseInteraction,
+    mouseInfluence,
+  ]);
 
   return <div ref={containerRef} className="w-full h-full" />;
 }

@@ -22,6 +22,9 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   title: content.meta.title,
   description: content.meta.description,
+  icons: {
+    icon: "/resources/logok.png",
+  },
   openGraph: {
     title: content.meta.title,
     description: content.meta.description,

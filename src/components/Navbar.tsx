@@ -1,9 +1,9 @@
-'use client';
-import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
-import content from '@/lib/content.json';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import content from "@/lib/content.json";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,11 +17,11 @@ export function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/">
               <Image
-                src="/resources/logo.jpg"
+                src="/resources/logok.png"
                 alt={logoText}
-                width={120}
-                height={32}
-                className="h-8 w-auto object-contain"
+                width={150}
+                height={40}
+                className="h-10 w-auto object-contain"
                 priority
               />
             </Link>
@@ -31,8 +31,8 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-8">
             <div className="flex items-center gap-6">
               {links.map((link, idx) => (
-                <Link 
-                  key={idx} 
+                <Link
+                  key={idx}
                   href={link.href}
                   className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
                 >
@@ -40,8 +40,8 @@ export function Navbar() {
                 </Link>
               ))}
             </div>
-            <Link 
-              href="/signup" 
+            <Link
+              href="/signup"
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-4 py-2 rounded-md text-sm font-medium transition-all"
             >
               {ctaLabel}

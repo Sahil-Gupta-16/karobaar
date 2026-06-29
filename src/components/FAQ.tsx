@@ -1,9 +1,9 @@
-'use client';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
-import content from '@/lib/content.json';
-import { cn } from '@/lib/utils';
+"use client";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import content from "@/lib/content.json";
+import { cn } from "@/lib/utils";
 
 export function FAQ() {
   const { kicker, headline, questions } = content.faq;
@@ -21,16 +21,21 @@ export function FAQ() {
           {questions.map((q, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <div key={idx} className="border border-border rounded-lg bg-background overflow-hidden">
+              <div
+                key={idx}
+                className="border border-border rounded-lg bg-background overflow-hidden"
+              >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
                 >
                   <span className="font-medium text-lg">{q.question}</span>
-                  <ChevronDown className={cn(
-                    "w-5 h-5 text-foreground/50 transition-transform duration-200",
-                    isOpen && "rotate-180"
-                  )} />
+                  <ChevronDown
+                    className={cn(
+                      "w-5 h-5 text-foreground/50 transition-transform duration-200",
+                      isOpen && "rotate-180",
+                    )}
+                  />
                 </button>
                 <AnimatePresence>
                   {isOpen && (
@@ -40,9 +45,7 @@ export function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <div className="px-6 pb-6 text-foreground/70">
-                        {q.answer}
-                      </div>
+                      <div className="px-6 pb-6 text-foreground/70">{q.answer}</div>
                     </motion.div>
                   )}
                 </AnimatePresence>

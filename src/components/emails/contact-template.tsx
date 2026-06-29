@@ -1,5 +1,15 @@
-import * as React from 'react';
-import { Html, Body, Head, Heading, Hr, Container, Preview, Section, Text } from '@react-email/components';
+import * as React from "react";
+import {
+  Html,
+  Body,
+  Head,
+  Heading,
+  Hr,
+  Container,
+  Preview,
+  Section,
+  Text,
+} from "@react-email/components";
 
 interface ContactEmailTemplateProps {
   name: string;
@@ -24,7 +34,7 @@ export const ContactEmailTemplate: React.FC<Readonly<ContactEmailTemplateProps>>
     <Body style={main}>
       <Container style={container}>
         <Section style={box}>
-          <Heading style={h1}>New Inquiry: {purpose || 'General'}</Heading>
+          <Heading style={h1}>New Inquiry: {purpose || "General"}</Heading>
           <Hr style={hr} />
           <Text style={paragraph}>
             <b>Name:</b> {name}
@@ -53,9 +63,7 @@ export const ContactEmailTemplate: React.FC<Readonly<ContactEmailTemplateProps>>
             {message}
           </Text>
           <Hr style={hr} />
-          <Text style={footer}>
-            Karobaar CRM Landing Page System
-          </Text>
+          <Text style={footer}>Karobaar CRM Landing Page System</Text>
         </Section>
       </Container>
     </Body>
@@ -63,37 +71,38 @@ export const ContactEmailTemplate: React.FC<Readonly<ContactEmailTemplateProps>>
 );
 
 const main = {
-  backgroundColor: '#f6f9fc',
-  fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
+  backgroundColor: "#f6f9fc",
+  fontFamily:
+    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
 };
 const container = {
-  backgroundColor: '#ffffff',
-  margin: '0 auto',
-  padding: '20px 0 48px',
-  marginBottom: '64px',
+  backgroundColor: "#ffffff",
+  margin: "0 auto",
+  padding: "20px 0 48px",
+  marginBottom: "64px",
 };
 const box = {
-  padding: '0 48px',
+  padding: "0 48px",
 };
 const h1 = {
-  color: '#333',
-  fontSize: '24px',
-  fontWeight: 'bold',
-  padding: '17px 0 0',
-  margin: '0',
+  color: "#333",
+  fontSize: "24px",
+  fontWeight: "bold",
+  padding: "17px 0 0",
+  margin: "0",
 };
 const hr = {
-  borderColor: '#e6ebf1',
-  margin: '20px 0',
+  borderColor: "#e6ebf1",
+  margin: "20px 0",
 };
 const paragraph = {
-  color: '#525f7f',
-  fontSize: '16px',
-  lineHeight: '24px',
-  textAlign: 'left' as const,
+  color: "#525f7f",
+  fontSize: "16px",
+  lineHeight: "24px",
+  textAlign: "left" as const,
 };
 const footer = {
-  color: '#8898aa',
-  fontSize: '12px',
-  lineHeight: '16px',
+  color: "#8898aa",
+  fontSize: "12px",
+  lineHeight: "16px",
 };
