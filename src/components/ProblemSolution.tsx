@@ -513,7 +513,7 @@ export function ProblemSolution() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-24 relative overflow-hidden" id="how-it-works">
+    <section className="py-40 md:py-48 relative overflow-hidden" id="how-it-works">
       {/* Premium ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-foreground/5 blur-[150px] rounded-full pointer-events-none" />
 

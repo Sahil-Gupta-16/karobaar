@@ -8,10 +8,13 @@ import { cn } from "@/lib/utils";
 
 function PricingDemo() {
   const { kicker, headline, trialNote, tiers } = content.pricing;
-  const [isYearly, setIsYearly] = useState(false);
+  const [isYearly, setIsYearly] = useState(true);
 
   return (
-    <section className="relative overflow-hidden bg-background text-foreground py-20 border-t border-border">
+    <section
+      className="relative overflow-hidden bg-background text-foreground py-44 border-t border-border"
+      id="pricing"
+    >
       <div className="relative z-10 mx-auto max-w-5xl px-4 md:px-8">
         <div className="mb-8 space-y-3">
           <p className="text-center text-xs font-mono text-accent uppercase tracking-widest mb-4">
@@ -53,7 +56,7 @@ function PricingDemo() {
           >
             Yearly{" "}
             <span className="bg-accent/15 border border-accent/30 text-accent text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
-              Save 20%
+              Save 17%
             </span>
           </span>
         </div>
@@ -72,13 +75,7 @@ function PricingDemo() {
               interval={tier.interval}
               isPopular={tier.isPopular}
               bestFor={tier.for}
-              CTA={
-                tier.isPopular
-                  ? "14-day free trial"
-                  : tier.name === "Elite"
-                    ? "Contact us"
-                    : "Start free trial"
-              }
+              CTA={tier.name === "Enterprise" ? "Contact Us" : "Start 1-month free trial"}
               benefits={tier.benefits || []}
             />
           ))}

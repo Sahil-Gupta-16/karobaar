@@ -18,8 +18,8 @@
   },
   "hero": {
     "kicker": "THE CRM THAT RUNS YOUR WHOLE TEAM",
-    "headline": "Manage customers, attendance, and payroll  without juggling three tools.",
-    "subline": "Built for growing Indian teams who are tired of stitching tools together.",
+    "headline": "A workspace that cares for your business.",
+    "subline": "Beautifully organized, effortlessly simple. Karobaar brings your sales, payroll, and invoicing together under one roof, creating an experience your team will genuinely enjoy.",
     "ctaPrimary": {
       "label": "Start free trial",
       "href": "/signup"
@@ -221,20 +221,20 @@
   },
   "pricing": {
     "kicker": "PRICING",
-    "headline": "Simple pricing for coaching centers.",
-    "trialNote": "14-day free trial · no credit card required",
+    "headline": "Simple pricing for growing teams.",
+    "trialNote": "1-month free trial · no credit card required",
     "tiers": [
       {
         "name": "Starter",
         "priceMonthly": "₹1,499",
-        "priceYearly": "₹1,199",
-        "yearlyTotal": "₹14,388",
-        "yearlySavings": "₹3,600",
+        "priceYearly": "₹1,249",
+        "yearlyTotal": "₹14,988",
+        "yearlySavings": "₹3,000",
         "interval": "/mo",
-        "for": "3 Devices · 3 Pipelines",
+        "for": "3 Devices · 2 Pipelines",
         "isPopular": false,
         "benefits": [
-          { "text": "3 Multi-Stage Pipelines", "checked": true },
+          { "text": "2 Multi-Stage Pipelines", "checked": true },
           { "text": "3 Connected Devices Included", "checked": true },
           { "text": "5 Custom Lead Tags", "checked": true },
           { "text": "Professional Fee Quotations", "checked": true },
@@ -249,37 +249,54 @@
       {
         "name": "Growth",
         "priceMonthly": "₹3,499",
-        "priceYearly": "₹2,799",
-        "yearlyTotal": "₹33,588",
-        "yearlySavings": "₹8,400",
+        "priceYearly": "₹2,900",
+        "yearlyTotal": "₹34,800",
+        "yearlySavings": "₹7,200",
         "interval": "/mo",
         "for": "20 Devices · Unlimited Pipelines",
         "isPopular": true,
         "benefits": [
-          { "text": "Everything in Starter Plan", "checked": true },
+          {
+            "text": "Everything in Starter Plan",
+            "checked": true,
+            "highlight": true
+          },
           { "text": "Unlimited Customized Pipelines", "checked": true },
           { "text": "Unlimited Lead Tags & Segments", "checked": true },
           { "text": "Additional Devices: ₹1,000/yr", "checked": true },
           { "text": "Direct On-Call Support", "checked": true },
-          { "text": "Automated WhatsApp Integration", "checked": true },
-          { "text": "Geofenced Teacher Attendance Logs", "checked": true },
-          { "text": "Visiting Faculty Payroll Engine", "checked": true },
-          { "text": "WhatsApp Fee & Batch Reminders", "checked": true },
+          {
+            "text": "Automated WhatsApp Integration",
+            "checked": true,
+            "highlight": true
+          },
+          { "text": "Geofenced Employee Attendance Logs", "checked": true },
+          { "text": " Payroll Engine", "checked": true },
           { "text": "Multi-Branch Center Management", "checked": true },
-          { "text": "Mobile App Access (Full Sync)", "checked": true }
+          {
+            "text": "Mobile App Access (Full Sync)",
+            "checked": true,
+            "highlight": true
+          },
+          { "text": "Custom API Integrations", "checked": false },
+          { "text": "Dedicated Database (Isolated Data)", "checked": false }
         ]
       },
       {
-        "name": "Elite",
-        "priceMonthly": "₹7,999",
-        "priceYearly": "₹6,399",
-        "yearlyTotal": "₹76,788",
-        "yearlySavings": "₹19,200",
-        "interval": "/mo",
+        "name": "Enterprise",
+        "priceMonthly": "Custom",
+        "priceYearly": "Custom",
+        "yearlyTotal": "Contact Sales",
+        "yearlySavings": "",
+        "interval": "",
         "for": "Unlimited login devices · Separate infra",
         "isPopular": false,
         "benefits": [
-          { "text": "Everything in Growth Plan", "checked": true },
+          {
+            "text": "Everything in Growth Plan",
+            "checked": true,
+            "highlight": true
+          },
           {
             "text": "Custom API Integrations",
             "checked": true,
@@ -321,15 +338,19 @@
     "subline": "Join hundreds of Indian businesses running smarter with Karobaar.",
     "ctaLabel": "Start free trial",
     "ctaHref": "/signup",
-    "riskReducer": "14-day free trial. Cancel anytime."
+    "riskReducer": "1-month free trial. Cancel anytime."
   },
   "footer": {
     "copyright": "© 2026 Karobaar. All rights reserved.",
     "links": [
       { "label": "Privacy Policy", "href": "/privacy" },
       { "label": "Terms of Service", "href": "/terms" },
-      { "label": "Security", "href": "/security" },
-      { "label": "System Status", "href": "/status" }
-    ]
+      { "label": "Security", "href": "/security" }
+    ],
+    "socials": {
+      "twitter": "https://twitter.com/karobaar",
+      "linkedin": "https://linkedin.com/company/vinayakyadav",
+      "github": "https://github.com/vinayakyadav2709"
+    }
   }
 }

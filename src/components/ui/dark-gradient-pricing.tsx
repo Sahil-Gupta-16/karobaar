@@ -106,7 +106,9 @@ export const PricingCard = ({
               {tier}
             </span>
             <div className="mb-2 flex items-baseline gap-1">
-              {isYearly && priceMonthly && priceYearly ? (
+              {price === "Custom" || priceMonthly === "Custom" ? (
+                <span className="text-4xl font-extrabold text-foreground">Custom</span>
+              ) : isYearly && priceMonthly && priceYearly ? (
                 <>
                   <span className="text-foreground/40 line-through text-lg font-semibold mr-1">
                     {priceMonthly}
@@ -118,11 +120,19 @@ export const PricingCard = ({
                   {priceMonthly || price}
                 </span>
               )}
-              <span className="text-foreground/60 text-sm">{interval}</span>
+              {price !== "Custom" && priceMonthly !== "Custom" && (
+                <span className="text-foreground/60 text-sm">{interval}</span>
+              )}
             </div>
             {isYearly && yearlyTotal && (
               <span className="text-[11px] text-primary font-bold mb-4 text-center">
-                Billed {yearlyTotal} annually <br /> Save {yearlySavings}/yr
+                {yearlySavings ? (
+                  <>
+                    Billed {yearlyTotal} annually <br /> Save {yearlySavings}/yr
+                  </>
+                ) : (
+                  yearlyTotal
+                )}
               </span>
             )}
             <span className="bg-gradient-to-r from-foreground to-foreground/50 bg-clip-text text-center text-transparent font-medium text-sm">

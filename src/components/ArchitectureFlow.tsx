@@ -512,7 +512,7 @@ export function ArchitectureFlow() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-32 bg-background relative overflow-hidden border-y border-border">
+    <section className="py-44 bg-background relative overflow-hidden border-y border-border">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

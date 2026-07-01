@@ -271,14 +271,14 @@ export function UseCases() {
   const { kicker, headline, sections } = content.useCases;
 
   return (
-    <section className="py-32 overflow-hidden bg-surface/10" id="features">
+    <section className="py-44 overflow-hidden bg-surface/10" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
           <p className="text-xs font-mono text-accent uppercase tracking-widest mb-4">{kicker}</p>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{headline}</h2>
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-44">
           {sections.map((section, idx) => {
             const isEven = idx % 2 === 0;
             return (
@@ -297,10 +297,14 @@ export function UseCases() {
                   transition={{ duration: 0.6 }}
                   className="flex-1 space-y-6"
                 >
-                  <span className="text-6xl md:text-8xl font-bold text-accent/20 tracking-tighter block mb-[-20px]">
-                    {section.number}
-                  </span>
-                  <h3 className="text-3xl md:text-4xl font-bold">{section.title}</h3>
+                  <div className="relative pt-6 md:pt-10 mb-2">
+                    <span className="absolute -top-3 md:-top-6 left-0 text-7xl md:text-9xl font-black text-accent/[0.15] tracking-tighter select-none z-0">
+                      {section.number}
+                    </span>
+                    <h3 className="relative z-10 text-3xl md:text-4xl font-bold">
+                      {section.title}
+                    </h3>
+                  </div>
                   <p className="text-lg text-foreground/70">{section.description}</p>
 
                   <ul className="space-y-3 pt-4">
